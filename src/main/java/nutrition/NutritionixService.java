@@ -11,5 +11,5 @@ public interface NutritionixService
             "x-app-id: 6da14d17",
             "x-app-key: 0ad507a73fef07ee2a6cb4f9d7cb6354"})
     @POST("v2/natural/nutrients/")
-    Single<NutritionixFeed> getCalories(@Body NutritionixRequest request);
+    Single<NutritionixFeed> getNutritionFacts(@Body NutritionixRequest request);
 }

@@ -9,7 +9,7 @@ public class NutritionixFeed
     static class Foods
     {
         String food_name;
-        int serving_weight_grams;
+        double serving_weight_grams;
         double nf_calories;
     }
 }
