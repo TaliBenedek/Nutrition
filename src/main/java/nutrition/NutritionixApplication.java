@@ -6,12 +6,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
 public class NutritionixApplication extends Application
 {
     @Override
-    public void start(Stage stage) throws IOException
+    public void start(Stage stage) throws Exception
     {
         NutritionixService service = new NutritionixServiceFactory().newInstance();
         NutritionController controller = new NutritionController(service);

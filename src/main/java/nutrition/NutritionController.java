@@ -14,21 +14,17 @@ import javax.swing.*;
 public class NutritionController
 {
     @FXML
-    Label nameLabel;
-
-    @FXML
     TextField nameTextField;
 
     @FXML
     Button calculateButton;
 
     @FXML
-    Label captionLabel;
-
-    @FXML
     Label gramsLabel;
 
     NutritionixService service;
+
+    NutritionixRequest request;
 
     final int hundredCalories = 100;
 
@@ -38,20 +34,9 @@ public class NutritionController
         this.service = service;
     }
 
-    @FXML
-    public void initialize()
-    {
-        calculateButton.setOnAction(this::calculate);
-    }
-
     public void calculate(ActionEvent actionEvent)
     {
-        NutritionixRequest request = new NutritionixRequest(nameTextField.getText(), "US/Eastern");
-        callService(request);
-    }
-
-    public void callService(NutritionixRequest request)
-    {
+        request = new NutritionixRequest(nameTextField.getText(), "US/Eastern");
         Disposable disposable = service.getNutritionFacts(request)
                 // request the data in the background
                 .subscribeOn(Schedulers.io())
@@ -61,12 +46,12 @@ public class NutritionController
                 .subscribe(this::onNutritionixFeed, this::onError);
     }
 
-    private void onNutritionixFeed(NutritionixFeed feed)
+    public void onNutritionixFeed(NutritionixFeed feed)
     {
         Platform.runLater(() -> onNutritionixFeedRunLater(feed));
     }
 
-    private void onNutritionixFeedRunLater(NutritionixFeed feed)
+    public void onNutritionixFeedRunLater(NutritionixFeed feed)
     {
         double baseCalories = feed.foods.get(0).nf_calories;
         double baseGrams = feed.foods.get(0).serving_weight_grams;

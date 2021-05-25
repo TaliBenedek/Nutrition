@@ -1,7 +1,5 @@
 nutrition/NutritionixRequest.java
  nutrition.NutritionixRequest
-nutrition/NutritionixServiceFactory.java
- nutrition.NutritionixServiceFactory
 nutrition/NutritionixService.java
  nutrition.NutritionixService
 nutrition/NutritionixFeed.java
@@ -11,3 +9,5 @@ nutrition/NutritionController.java
  nutrition.NutritionController
 nutrition/NutritionixApplication.java
  nutrition.NutritionixApplication
+nutrition/NutritionixServiceFactory.java
+ nutrition.NutritionixServiceFactory
