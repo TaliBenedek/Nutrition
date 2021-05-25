@@ -10,6 +10,7 @@
 <GridPane xmlns="http://javafx.com/javafx"
           xmlns:fx="http://javafx.com/fxml"
           gridLinesVisible="false"
+          style="-fx-background-color: thistle"
           alignment="center"
           hgap="10" vgap="10"
           prefHeight="400.0" prefWidth="600.0">
@@ -19,7 +20,7 @@
     <Label fx:id="nameLabel" text="Name of food:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
     <TextField fx:id="nameTextField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
     <Button fx:id="calculateButton" text="Calculate" onAction="#calculate" GridPane.rowIndex="1" GridPane.columnIndex="1" GridPane.columnSpan="2"/>
-    <Label fx:id="captionLabel" text="100 calories of your food is:" GridPane.rowIndex="2" GridPane.columnSpan="2"/>
+    <Label fx:id="captionLabel" text="100 calories of this food is:" GridPane.rowIndex="2" GridPane.columnSpan="2"/>
     <Label fx:id="gramsLabel" GridPane.rowIndex="3" GridPane.columnSpan="2"/>
 
 </GridPane>

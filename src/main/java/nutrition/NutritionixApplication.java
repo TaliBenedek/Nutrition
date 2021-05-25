@@ -12,7 +12,8 @@ public class NutritionixApplication extends Application
     public void start(Stage stage) throws Exception
     {
         NutritionixService service = new NutritionixServiceFactory().newInstance();
-        NutritionController controller = new NutritionController(service);
+        NutritionixRequest request = new NutritionixRequest("banana", "US/Eastern");
+        NutritionixController controller = new NutritionixController(service, request);
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/nutrition_application.fxml"));
         loader.setController(controller);

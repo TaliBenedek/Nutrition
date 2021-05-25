@@ -11,7 +11,7 @@ import javafx.scene.control.TextField;
 
 import javax.swing.*;
 
-public class NutritionController
+public class NutritionixController
 {
     @FXML
     TextField nameTextField;
@@ -29,9 +29,10 @@ public class NutritionController
     final int hundredCalories = 100;
 
     // Dependency injection
-    public NutritionController(NutritionixService service)
+    public NutritionixController(NutritionixService service, NutritionixRequest request)
     {
         this.service = service;
+        this.request = request;
     }
 
     public void calculate(ActionEvent actionEvent)

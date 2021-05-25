@@ -5,21 +5,27 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import java.util.Arrays;
+
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
-public class NutritionControllerTest
+public class NutritionixControllerTest
 {
     private NutritionixService service;
     private NutritionixRequest request;
-    private NutritionController controller;
+    private NutritionixController controller;
     private TextField nameTextField;
     private Button calculateButton;
     private Label gramsLabel;
-    //private int hundredCalories;
+
+    @BeforeClass
+    public static void beforeClass() {
+        com.sun.javafx.application.PlatformImpl.startup(()->{});
+    }
 
     @Test
     public void calculate()
@@ -27,42 +33,37 @@ public class NutritionControllerTest
         //given
         givenNutritionController();
         doReturn("banana").when(controller.nameTextField).getText();
-        doReturn(Single.never()).when(service).getNutritionFacts(request);
+        doReturn(Single.never()).when(controller.service).getNutritionFacts(any(NutritionixRequest.class));
 
         //when
         controller.calculate(mock(ActionEvent.class));
 
         //then
-        verify(service.getNutritionFacts(request));
-    }
-
-    @Test
-    public void onNutritionixFeed()
-    {
-        //given
-
-        //when
-
-        //then
+        verify(controller.service).getNutritionFacts(controller.request);
     }
 
     @Test
     public void onNutritionixFeedRunLater()
     {
         //given
+        givenNutritionController();
+        NutritionixFeed feed = mock(NutritionixFeed.class);
+        feed.foods = Arrays.asList(mock(NutritionixFeed.Foods.class));
+        feed.foods.get(0).nf_calories = 105.02;
+        feed.foods.get(0).serving_weight_grams = 118;
 
         //when
+        controller.onNutritionixFeedRunLater(feed);
 
         //then
+        verify(gramsLabel).setText("112 grams");
     }
 
     private void givenNutritionController()
     {
         service = mock(NutritionixService.class);
-        controller = new NutritionController(service);
-
         request = mock(NutritionixRequest.class);
-        controller.request = request;
+        controller = new NutritionixController(service, request);
 
         nameTextField = mock(TextField.class);
         controller.nameTextField = nameTextField;
