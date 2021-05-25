@@ -5,9 +5,9 @@ nutrition/NutritionixRequest.java
  nutrition.NutritionixRequest
 nutrition/NutritionixService.java
  nutrition.NutritionixService
-nutrition/NutritionController.java
- nutrition.NutritionController
-nutrition/NutritionixApplication.java
- nutrition.NutritionixApplication
 nutrition/NutritionixServiceFactory.java
  nutrition.NutritionixServiceFactory
+nutrition/NutritionixController.java
+ nutrition.NutritionixController
+nutrition/NutritionixApplication.java
+ nutrition.NutritionixApplication
