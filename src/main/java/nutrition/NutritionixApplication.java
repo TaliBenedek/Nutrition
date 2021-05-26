@@ -19,7 +19,7 @@ public class NutritionixApplication extends Application
         loader.setController(controller);
         Parent parent = loader.load();
 
-        Scene scene = new Scene(parent, 300, 250);
+        Scene scene = new Scene(parent, 400, 500);
 
         stage.setTitle("Nutrition");
         stage.setScene(scene);

@@ -1,4 +1,4 @@
 nutrition/NutritionixServiceTest.java
  nutrition.NutritionixServiceTest
-nutrition/NutritionControllerTest.java
- nutrition.NutritionControllerTest
+nutrition/NutritionixControllerTest.java
+ nutrition.NutritionixControllerTest

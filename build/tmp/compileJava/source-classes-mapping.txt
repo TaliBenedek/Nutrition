@@ -1,10 +1,10 @@
+nutrition/NutritionixService.java
+ nutrition.NutritionixService
+nutrition/NutritionixRequest.java
+ nutrition.NutritionixRequest
 nutrition/NutritionixFeed.java
  nutrition.NutritionixFeed
  nutrition.NutritionixFeed$Foods
-nutrition/NutritionixRequest.java
- nutrition.NutritionixRequest
-nutrition/NutritionixService.java
- nutrition.NutritionixService
 nutrition/NutritionixServiceFactory.java
  nutrition.NutritionixServiceFactory
 nutrition/NutritionixController.java

@@ -20,7 +20,41 @@
     <Label fx:id="nameLabel" text="Name of food:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
     <TextField fx:id="nameTextField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
     <Button fx:id="calculateButton" text="Calculate" onAction="#calculate" GridPane.rowIndex="1" GridPane.columnIndex="1" GridPane.columnSpan="2"/>
-    <Label fx:id="captionLabel" text="100 calories of this food is:" GridPane.rowIndex="2" GridPane.columnSpan="2"/>
-    <Label fx:id="gramsLabel" GridPane.rowIndex="3" GridPane.columnSpan="2"/>
+
+    <Label fx:id="servingSizeCaption" text="Serving size:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <Label fx:id="servingSizeLabel" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+    <Label fx:id="servingWeightCaption" text="Serving weight:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <Label fx:id="servingWeightLabel" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+    <Label fx:id="caloriesCaption" text="Calories:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+    <Label fx:id="caloriesLabel" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+    <Label fx:id="totalFatCaption" text="Total fat:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+    <Label fx:id="totalFatLabel" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+    <Label fx:id="saturatedFatCaption" text="Saturated fat:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+    <Label fx:id="saturatedFatLabel" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+    <Label fx:id="cholesterolCaption" text="Cholesterol:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+    <Label fx:id="cholesterolLabel" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+    <Label fx:id="sodiumCaption" text="Sodium:" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+    <Label fx:id="sodiumLabel" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+
+    <Label fx:id="totalCarbsCaption" text="Total carbs:" GridPane.rowIndex="9" GridPane.columnIndex="0"/>
+    <Label fx:id="totalCarbsLabel" GridPane.rowIndex="9" GridPane.columnIndex="1"/>
+
+    <Label fx:id="fiberCaption" text="Fiber:" GridPane.rowIndex="10" GridPane.columnIndex="0"/>
+    <Label fx:id="fiberLabel" GridPane.rowIndex="10" GridPane.columnIndex="1"/>
+
+    <Label fx:id="sugarsCaption" text="Sugar:" GridPane.rowIndex="11" GridPane.columnIndex="0"/>
+    <Label fx:id="sugarsLabel" GridPane.rowIndex="11" GridPane.columnIndex="1"/>
+
+    <Label fx:id="proteinCaption" text="Protein:" GridPane.rowIndex="12" GridPane.columnIndex="0"/>
+    <Label fx:id="proteinLabel" GridPane.rowIndex="12" GridPane.columnIndex="1"/>
+
+    <Label fx:id="hundredCaloriesCaption" text="100 calories of this food is:" GridPane.rowIndex="13" GridPane.columnIndex="0"/>
+    <Label fx:id="hundredCaloriesLabel" GridPane.rowIndex="13" GridPane.columnIndex="1"/>
 
 </GridPane>
